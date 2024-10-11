@@ -1,7 +1,8 @@
-deepin-desktop-base (2024.10.10) UNRELEASED; urgency=medium
+deepin-desktop-base (2024.10.11) UNRELEASED; urgency=medium
 
   * 支持紧凑模式
   * 去掉beta字样
+  * 不再带gxde-config转用dde-anything-server-service
 
  -- gfdgd_xi <3025613752@qq.com>  Tue, 01 Oct 2024 19:16:24 +0800
 
