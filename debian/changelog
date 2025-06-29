@@ -1,4 +1,4 @@
-gxde-desktop-base (2025.06.22-1) UNRELEASED; urgency=medium
+gxde-desktop-base (2025.06.29) UNRELEASED; urgency=medium
 
   * 15.15 Release
   * ban smbd
@@ -16,8 +16,9 @@ gxde-desktop-base (2025.06.22-1) UNRELEASED; urgency=medium
   * 移除 conflicts
   * 调整 systemd 版本
   * 修复未指定 codename 时无法构建的问题
+  * 新增 hetao 的配置文件
 
- -- gfdgd_xi <3025613752@qq.com>  Sun, 22 Jun 2025 15:05:48 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Sun, 29 Jun 2025 09:00:36 +0800
 
 gxde-desktop-base (2025.02.12) UNRELEASED; urgency=medium
 

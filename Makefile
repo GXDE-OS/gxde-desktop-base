@@ -6,6 +6,7 @@ build:
 	mkdir temp -pv
 	cp files/*-lizhi temp -r
 	cp files/*-bixie temp -r
+	cp files/*-hetao temp -r
 	#cp files/desktop-version-lizhi files/desktop-version -r
 	#cp files/os-release-lizhi files/os-release -r
 	if [ "$(GXDE_CODENAME)" = "zhuangzhuang" ]; then rename "s/-lizhi//g" files/*-lizhi ; fi
@@ -13,6 +14,7 @@ build:
 	if [ "$(GXDE_CODENAME)" = "meimei" ]; then rename "s/-meimei//g" files/*-meimei ; fi
 	if [ "$(GXDE_CODENAME)" = "tianlu" ]; then rename "s/-bixie//g" files/*-bixie ; fi
 	if [ "$(GXDE_CODENAME)" = "bixie" ]; then rename "s/-bixie//g" files/*-bixie ; fi
+	if [ "$(GXDE_CODENAME)" = "hetao" ]; then rename "s/-hetao//g" files/*-hetao ; fi
 	cp temp/* files -r
 	rm -rf temp
 
@@ -69,14 +71,9 @@ install:
 	cp -rv files/i18n_dependent.json $(DESTDIR)/usr/share/i18n
 	cp -rv files/language_info.json $(DESTDIR)/usr/share/i18n/
 	if [ -f files/desktop-version ]; then cp -rv files/desktop-version $(DESTDIR)/usr/lib/deepin/ ; fi
-	if [ "$(GXDE_CODENAME)" = "tianlu" ]; then cp -rv files/lsb-release $(DESTDIR)/usr/lib/deepin/ ; fi
-	if [ "$(GXDE_CODENAME)" = "tianlu" ]; then cp -rv files/os-version $(DESTDIR)/usr/lib/deepin/ ; fi
-	if [ "$(GXDE_CODENAME)" = "bixie" ]; then cp -rv files/lsb-release $(DESTDIR)/usr/lib/deepin/ ; fi
-	if [ "$(GXDE_CODENAME)" = "bixie" ]; then  cp -rv files/os-version $(DESTDIR)/usr/lib/deepin/ ; fi
-	if [ "$(GXDE_CODENAME)" = "lizhi" ]; then cp -rv files/lsb-release $(DESTDIR)/usr/lib/deepin/ ; fi
-	if [ "$(GXDE_CODENAME)" = "lizhi" ]; then  cp -rv files/os-version $(DESTDIR)/usr/lib/deepin/ ; fi
-	if [ "$(GXDE_CODENAME)" = "zhuangzhuang" ]; then cp -rv files/lsb-release-zhuangzhuang $(DESTDIR)/usr/lib/deepin/lsb-release ; fi
-	if [ "$(GXDE_CODENAME)" = "zhuangzhuang" ]; then cp -rv files/os-version $(DESTDIR)/usr/lib/deepin/os-version ; fi
+	if [ -f files/lsb-release ]; then cp -rv files/lsb-release $(DESTDIR)/usr/lib/deepin/ ; fi
+	if [ -f files/os-version ]; then cp -rv files/os-version $(DESTDIR)/usr/lib/deepin/ ; fi
+
 	echo "$(GXDE_CODENAME)" > $(DESTDIR)/usr/lib/deepin/gxde-codename
 	cp -rv files/deepin-logo.png $(DESTDIR)/usr/share/plymouth/
 	cp -rv files/systemd.conf $(DESTDIR)/etc/systemd/system.conf.d/
