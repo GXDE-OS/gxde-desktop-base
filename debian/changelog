@@ -1,6 +1,6 @@
-gxde-desktop-base (2025.06.29) UNRELEASED; urgency=medium
+gxde-desktop-base (2025.07.14) UNRELEASED; urgency=medium
 
-  * 15.15 Release
+  * 15.15.3 Release
   * ban smbd
   * fix meimei build
   * 新增 DTK2_XWAYLAND 标识 
