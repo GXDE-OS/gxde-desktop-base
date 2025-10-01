@@ -11,3 +11,8 @@ jobs:
   call:
     uses: GXDE-OS/GXDE/.github/workflows/building-deb.yml@master
     secrets: inherit
+
+    
+  call:
+    uses: GXDE-OS/GXDE/.github/workflows/building-deb-tianlu.yml@master
+    secrets: inherit
