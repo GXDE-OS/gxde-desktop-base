@@ -1,12 +1,14 @@
-gxde-desktop-base (2025.09.27) UNRELEASED; urgency=medium
+gxde-desktop-base (2025.11.06) UNRELEASED; urgency=medium
 
   [ shenmo ]
   * 25.2.1 Release
 
   [ gfdgd_xi ]
   * 15.15.4 Release
+  * 25.3 Release
+  * 15.15.5 Release
 
- -- gfdgd_xi <3025613752@qq.com>  Sat, 27 Sep 2025 09:10:32 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Thu, 06 Nov 2025 21:46:54 +0800
 
 gxde-desktop-base (2025.07.14) UNRELEASED; urgency=medium
 
