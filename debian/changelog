@@ -1,7 +1,7 @@
-gxde-desktop-base (2026.02.11) UNRELEASED; urgency=medium
+gxde-desktop-base (2026.05.03) UNRELEASED; urgency=medium
 
   [ shenmo ]
-  * 25.2.1 Release
+  * 25.4 Release
   * 修复 DTK6 应用双标题栏的问题
 
   [ gfdgd_xi ]
