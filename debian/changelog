@@ -1,4 +1,4 @@
-gxde-desktop-base (2026.05.03) UNRELEASED; urgency=medium
+gxde-desktop-base (2026.06.04) UNRELEASED; urgency=medium
 
   [ shenmo ]
   * 25.4 Release
@@ -9,8 +9,9 @@ gxde-desktop-base (2026.05.03) UNRELEASED; urgency=medium
   * 25.3 Release
   * 15.15.5 Release
   * 25.3.1 Release
+  * 加入 QT 插件 dwayland,wayland
 
- -- gfdgd_xi <3025613752@qq.com>  Wed, 11 Feb 2026 19:19:06 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Thu, 04 Jun 2026 07:38:35 +0800
 
 gxde-desktop-base (2025.07.14) UNRELEASED; urgency=medium
 

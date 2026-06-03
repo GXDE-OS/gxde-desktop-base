@@ -1,7 +1,7 @@
 #!/bin/bash
 export PATH=$PATH:/sbin
 export QT_QPA_PLATFORMTHEME=deepin
-export 'QT_QPA_PLATFORM=dxcb;xcb'
+export 'QT_QPA_PLATFORM=dxcb;xcb;dwayland;wayland'
 # 用于解决 deepin 截图无法使用的问题
 export DBUS_FATAL_WARNINGS=0
 # 紧凑模式设置
