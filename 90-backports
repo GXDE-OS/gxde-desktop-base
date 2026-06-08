@@ -5,3 +5,7 @@ Pin-Priority: 500
 Package: *
 Pin: release n=trixie-backports
 Pin-Priority: 500
+
+Package: *qt*webengine*:loong64 *qt*pdf*:loong64
+Pin: release n=trixie-backports
+Pin-Priority: 100
