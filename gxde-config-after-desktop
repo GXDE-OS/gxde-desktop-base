@@ -13,12 +13,27 @@ nohup gxde-launcher &
 
 ## 预加载dlauncher加速启动
 
+isChroot=$(dbus-send --session --print-reply \
+  --dest=com.gxde.daemon.system.info \
+  /com/gxde/daemon/system/info \
+  com.gxde.daemon.system.info.IsInChroot | awk '/boolean/ {print $NF}')
 
 # 加载 VNC（如果开启的话）
 if [[ -f ~/.config/GXDE/gxde-x11vnc ]]; then
 	if [[ -f ~/.vnc/passwd ]]; then
-		nohup x11vnc --forever -rfbauth ~/.vnc/passwd -capslock &
+		if [[ $isChroot == "true" ]]; then
+			# 小小电脑/chroot下因为环境特殊，不支持 XShm 模块，
+			# 所以需要加上 -noshm 参数禁用该模块启动x11vnc
+			nohup x11vnc --forever -rfbauth -noshm ~/.vnc/passwd -capslock &
+		else
+			# 非chroot环境下，启用 XShm 模块启动x11vnc
+			nohup x11vnc --forever -rfbauth ~/.vnc/passwd -capslock &
+		fi
 	else
-		nohup x11vnc --forever -capslock &  # 免密
+		if [[ $isChroot == "true" ]]; then
+			nohup x11vnc --forever -noshm -capslock &
+		else
+			nohup x11vnc --forever -capslock &  # 免密
+		fi
 	fi
 fi
