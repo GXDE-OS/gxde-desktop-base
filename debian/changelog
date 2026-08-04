@@ -1,4 +1,4 @@
-gxde-desktop-base (2026.07.21) UNRELEASED; urgency=medium
+gxde-desktop-base (2026.08.04) UNRELEASED; urgency=medium
 
   [ shenmo ]
   * 25.4 Release
@@ -14,8 +14,9 @@ gxde-desktop-base (2026.07.21) UNRELEASED; urgency=medium
   * trixie loong64不安装源内的bpo qtwebengine
   * 25.4.1 Release
   * 小小电脑下使用 VNC 远程支持禁用 XShm，修复无法正确启用 VNC 远程的问题
+  * 内核默认开启 psi=1
 
- -- gfdgd_xi <3025613752@qq.com>  Thu, 09 Jul 2026 09:41:40 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Tue, 04 Aug 2026 14:24:52 +0800
 
 gxde-desktop-base (2025.07.14) UNRELEASED; urgency=medium
 
