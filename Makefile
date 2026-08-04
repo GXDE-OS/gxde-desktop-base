@@ -55,7 +55,8 @@ install:
 	mkdir -pv $(DESTDIR)/etc/systemd/logind.conf.d/
 	mkdir -pv $(DESTDIR)/usr/share/python-apt/templates/
 	mkdir -pv $(DESTDIR)/usr/share/deepin/distribution/
-	mkdir -p ${DESTDIR}/tmp
+	mkdir -pv $(DESTDIR)/etc/systemd/
+	mkdir -pv ${DESTDIR}/tmp
 	#cp -rv debian-backports.list $(DESTDIR)/tmp/debian-backports.list
 	cp -rv dde-file-manager-gvfs.rules $(DESTDIR)/usr/share/polkit-1/rules.d/dde-file-manager-gvfs.rules
 	cp -rv gxde.sh $(DESTDIR)/etc/profile.d/gxde.sh
@@ -70,6 +71,7 @@ install:
 
 	cp -rv files/i18n_dependent.json $(DESTDIR)/usr/share/i18n
 	cp -rv files/language_info.json $(DESTDIR)/usr/share/i18n/
+	cp -rv zram-generator.conf $(DESTDIR)/etc/systemd/zram-generator.conf
 	if [ -f files/desktop-version ]; then cp -rv files/desktop-version $(DESTDIR)/usr/lib/deepin/ ; fi
 	if [ -f files/lsb-release ]; then cp -rv files/lsb-release $(DESTDIR)/usr/lib/deepin/ ; fi
 	if [ -f files/os-version ]; then cp -rv files/os-version $(DESTDIR)/usr/lib/deepin/ ; fi

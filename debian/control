@@ -34,5 +34,6 @@ Depends:
  fonts-symbola, 
  base-files (>= 12.4+deb12u10),
  systemd,
+ systemd-zram-generator,
 Description: The basic file of GXDE Desktop, 
  provides system attribute description for DDE components
