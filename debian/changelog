@@ -1,9 +1,10 @@
-gxde-desktop-base (2026.08.04gxde1) UNRELEASED; urgency=medium
+gxde-desktop-base (2026.08.19gxde1) UNRELEASED; urgency=medium
 
   [ shenmo ]
   * 25.4 Release
   * 修复 DTK6 应用双标题栏的问题
   * 修复 预加载 launcher 导致的定位不准问题（>=6.0.0）
+  * 保留 sudo 启动图形应用所需的 Wayland 会话环境变量
 
   [ gfdgd_xi ]
   * 15.15.4 Release
@@ -17,7 +18,7 @@ gxde-desktop-base (2026.08.04gxde1) UNRELEASED; urgency=medium
   * 内核默认开启 psi=1
   * 默认开启 zram 配置
 
- -- gfdgd_xi <3025613752@qq.com>  Tue, 04 Aug 2026 18:57:49 +0800
+ -- shenmo <shenmo@spark-app.store>  Wed, 19 Aug 2026 19:35:12 +0800
 
 gxde-desktop-base (2025.07.14) UNRELEASED; urgency=medium
 

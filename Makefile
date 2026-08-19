@@ -53,6 +53,7 @@ install:
 	mkdir -pv $(DESTDIR)/usr/share/plymouth/
 	mkdir -pv $(DESTDIR)/etc/systemd/system.conf.d/
 	mkdir -pv $(DESTDIR)/etc/systemd/logind.conf.d/
+	mkdir -pv $(DESTDIR)/etc/sudoers.d/
 	mkdir -pv $(DESTDIR)/usr/share/python-apt/templates/
 	mkdir -pv $(DESTDIR)/usr/share/deepin/distribution/
 	mkdir -pv $(DESTDIR)/etc/systemd/
@@ -72,6 +73,8 @@ install:
 	cp -rv files/i18n_dependent.json $(DESTDIR)/usr/share/i18n
 	cp -rv files/language_info.json $(DESTDIR)/usr/share/i18n/
 	cp -rv zram-generator.conf $(DESTDIR)/etc/systemd/zram-generator.conf
+	install -Dm644 files/20-keep-user-gui-env-gxde $(DESTDIR)/etc/sudoers.d/20-keep-user-gui-env-gxde
+	chmod 0440 $(DESTDIR)/etc/sudoers.d/20-keep-user-gui-env-gxde
 	if [ -f files/desktop-version ]; then cp -rv files/desktop-version $(DESTDIR)/usr/lib/deepin/ ; fi
 	if [ -f files/lsb-release ]; then cp -rv files/lsb-release $(DESTDIR)/usr/lib/deepin/ ; fi
 	if [ -f files/os-version ]; then cp -rv files/os-version $(DESTDIR)/usr/lib/deepin/ ; fi
