@@ -1,7 +1,7 @@
-gxde-desktop-base (2026.08.19gxde1) UNRELEASED; urgency=medium
+gxde-desktop-base (2026.08.23) UNRELEASED; urgency=medium
 
   [ shenmo ]
-  * 25.4 Release
+  * 25.5B Release
   * 修复 DTK6 应用双标题栏的问题
   * 修复 预加载 launcher 导致的定位不准问题（>=6.0.0）
   * 保留 sudo 启动图形应用所需的 Wayland 会话环境变量
