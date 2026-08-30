@@ -1,4 +1,4 @@
-gxde-desktop-base (2026.08.23) UNRELEASED; urgency=medium
+gxde-desktop-base (2026.08.30) UNRELEASED; urgency=medium
 
   [ shenmo ]
   * 25.5B Release
@@ -17,8 +17,9 @@ gxde-desktop-base (2026.08.23) UNRELEASED; urgency=medium
   * 小小电脑下使用 VNC 远程支持禁用 XShm，修复无法正确启用 VNC 远程的问题
   * 内核默认开启 psi=1
   * 默认开启 zram 配置
+  * 调整 systemd-zram-generator 为推荐依赖
 
- -- shenmo <shenmo@spark-app.store>  Wed, 19 Aug 2026 19:35:12 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Sun, 30 Aug 2026 22:07:50 +0800
 
 gxde-desktop-base (2025.07.14) UNRELEASED; urgency=medium
 

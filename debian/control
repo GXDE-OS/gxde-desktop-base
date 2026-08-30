@@ -24,7 +24,8 @@ Conflicts:
  deepin-desktop-base (>> 2025.06.12),
 Recommends:
  gxde-source,
- tela-grub2-themes
+ systemd-zram-generator,
+ tela-grub2-themes,
 Depends: 
  ${misc:Depends}, 
  deepin-keyring, 
@@ -34,6 +35,5 @@ Depends:
  fonts-symbola, 
  base-files (>= 12.4+deb12u10),
  systemd,
- systemd-zram-generator,
 Description: The basic file of GXDE Desktop, 
  provides system attribute description for DDE components
