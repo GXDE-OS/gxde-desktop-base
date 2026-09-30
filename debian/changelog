@@ -1,4 +1,4 @@
-gxde-desktop-base (2026.08.30) UNRELEASED; urgency=medium
+gxde-desktop-base (2026.09.30) UNRELEASED; urgency=medium
 
   [ shenmo ]
   * 25.5B Release
@@ -18,8 +18,9 @@ gxde-desktop-base (2026.08.30) UNRELEASED; urgency=medium
   * 内核默认开启 psi=1
   * 默认开启 zram 配置
   * 调整 systemd-zram-generator 为推荐依赖
+  * zram 使用 lz4 替代 zstd
 
- -- gfdgd_xi <3025613752@qq.com>  Sun, 30 Aug 2026 22:07:50 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Wed, 30 Sep 2026 16:08:19 +0800
 
 gxde-desktop-base (2025.07.14) UNRELEASED; urgency=medium
 
