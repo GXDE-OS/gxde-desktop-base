@@ -1,4 +1,4 @@
-gxde-desktop-base (2026.09.30) UNRELEASED; urgency=medium
+gxde-desktop-base (2026.10.04) UNRELEASED; urgency=medium
 
   [ shenmo ]
   * 25.5B Release
@@ -7,10 +7,7 @@ gxde-desktop-base (2026.09.30) UNRELEASED; urgency=medium
   * 保留 sudo 启动图形应用所需的 Wayland 会话环境变量
 
   [ gfdgd_xi ]
-  * 15.15.4 Release
-  * 25.3 Release
-  * 15.15.5 Release
-  * 25.3.1 Release
+  * 25.5 Release
   * 加入 QT 插件 dwayland,wayland
   * trixie loong64不安装源内的bpo qtwebengine
   * 25.4.1 Release
@@ -19,8 +16,9 @@ gxde-desktop-base (2026.09.30) UNRELEASED; urgency=medium
   * 默认开启 zram 配置
   * 调整 systemd-zram-generator 为推荐依赖
   * zram 使用 lz4 替代 zstd
+  * 
 
- -- gfdgd_xi <3025613752@qq.com>  Wed, 30 Sep 2026 16:08:19 +0800
+ -- gfdgd_xi <3025613752@qq.com>  Sun, 04 Oct 2026 16:01:42 +0800
 
 gxde-desktop-base (2025.07.14) UNRELEASED; urgency=medium
 
