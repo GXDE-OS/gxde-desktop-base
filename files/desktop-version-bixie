@@ -6,4 +6,5 @@ Edition=Y2025E0001
 Copyright=Y2025CR001
 [Addition]
 Milestone=Bixie
+Milestone[zh_CN]=辟邪
 Buildid=build1

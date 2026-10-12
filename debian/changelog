@@ -1,4 +1,4 @@
-gxde-desktop-base (2026.10.04) UNRELEASED; urgency=medium
+gxde-desktop-base (2026.10.12) UNRELEASED; urgency=medium
 
   [ shenmo ]
   * 25.5B Release
@@ -16,9 +16,10 @@ gxde-desktop-base (2026.10.04) UNRELEASED; urgency=medium
   * 默认开启 zram 配置
   * 调整 systemd-zram-generator 为推荐依赖
   * zram 使用 lz4 替代 zstd
-  * 
+  * /etc/deepin-version 新增 Milestone[zh_CN] 条目
 
- -- gfdgd_xi <3025613752@qq.com>  Sun, 04 Oct 2026 16:01:42 +0800
+
+ -- gfdgd_xi <3025613752@qq.com>  Mon, 12 Oct 2026 17:27:18 +0800
 
 gxde-desktop-base (2025.07.14) UNRELEASED; urgency=medium
 

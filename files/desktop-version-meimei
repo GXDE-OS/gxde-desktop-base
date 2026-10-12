@@ -6,4 +6,5 @@ Edition=Y2025E0001
 Copyright=Y2025CR001
 [Addition]
 Milestone=Meimei
+Milestone[zh_CN]=美美
 Buildid=build1
