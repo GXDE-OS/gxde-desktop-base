@@ -18,8 +18,8 @@ Files: README.md README.zh_CN.md CHANGELOG.md doc/*
 Copyright: UnionTech Software Technology Co., Ltd.
 License: CC-BY-4.0
 
-# debian rpm archlinux
-Files: debian/* archlinux/*
+# debian rpm arch
+Files: debian/* arch/*
 Copyright: None
 License: CC0-1.0
 

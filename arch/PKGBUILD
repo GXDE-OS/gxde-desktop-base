@@ -1,0 +1,51 @@
+# Maintainer: CharOfString <root@charofstring.cc>
+pkgname=gxde-desktop-base-git
+pkgver=2026.10.04
+pkgrel=1
+pkgdesc='Base component for GXDE (desktop identity, distribution info and defaults)'
+arch=('any')
+url="https://github.com/GXDE-OS/gxde-desktop-base"
+license=('GPL-3.0-or-later')
+depends=('bash')
+optdepends=('zram-generator: use the shipped zram configuration')
+# Makefile 使用 Perl 版 rename ・ The Makefile uses the Perl rename.
+makedepends=('git' 'perl-rename')
+provides=('deepin-desktop-base')
+conflicts=('deepin-desktop-base')
+backup=('etc/profile.d/gxde.sh'
+        'etc/systemd/zram-generator.conf'
+        'etc/systemd/system.conf.d/systemd.conf'
+        'etc/systemd/logind.conf.d/logind.conf')
+source=()
+sha512sums=()
+
+# 与 Debian 构建中最新的 GXDE 版本一致 ・ Match the newest GXDE release used by the Debian builds.
+_codename=zhuangzhuang
+
+# 直接使用 PKGBUILD 所在的 git 仓库作为源码 ・ Build from the git checkout this PKGBUILD lives in.
+_srcroot() {
+  git -C "$startdir" rev-parse --show-toplevel
+}
+
+build() {
+  # Arch 的 rename 来自 util-linux，语法不同 ・ Arch's rename is util-linux's, with another syntax.
+  mkdir -p bin
+  ln -sf /usr/bin/perl-rename bin/rename
+  PATH="$srcdir/bin:$PATH" make -C "$(_srcroot)" GXDE_CODENAME=$_codename
+}
+
+package() {
+  make -C "$(_srcroot)" DESTDIR="$pkgdir" GXDE_CODENAME=$_codename install
+
+  # apt 相关文件在 Arch 上无用，/tmp 也不应打包
+  # apt files are useless on Arch, and /tmp must not be packaged.
+  rm -r "$pkgdir"/etc/apt "$pkgdir"/usr/share/python-apt "$pkgdir"/usr/share/distro-info "$pkgdir"/tmp
+
+  # Debian 的 postinst 会把 /usr/lib/deepin/* 链接到 /etc，并覆盖 /usr/lib/os-release；
+  # 在 Arch 上 os-release 和 lsb-release 属于 filesystem 和 lsb-release，这里只链接 DTK 读取的两个文件
+  # Debian's postinst links /usr/lib/deepin/* into /etc and overwrites
+  # /usr/lib/os-release.  On Arch os-release and lsb-release belong to
+  # filesystem and lsb-release, so only link the two files DTK reads.
+  ln -s ../usr/lib/deepin/desktop-version "$pkgdir"/etc/deepin-version
+  ln -s ../usr/lib/deepin/os-version "$pkgdir"/etc/os-version
+}
