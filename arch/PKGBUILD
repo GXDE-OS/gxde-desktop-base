@@ -1,6 +1,6 @@
 # Maintainer: CharOfString <root@charofstring.cc>
 pkgname=gxde-desktop-base-git
-pkgver=2026.10.04
+pkgver=2026.10.28
 pkgrel=1
 pkgdesc='Base component for GXDE (desktop identity, distribution info and defaults)'
 arch=('any')
