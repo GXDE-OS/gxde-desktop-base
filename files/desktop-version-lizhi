@@ -1,10 +1,10 @@
 [Release]
-Version=25.5
+Version=25.5.1
 Type=Desktop
 Type[zh_CN]=桌面版
 Edition=Y2025E0001
 Copyright=Y2025CR001
 [Addition]
-Milestone=Lizhi
-Milestone[zh_CN]=荔枝
+Milestone=Zhuangzhuang
+Milestone[zh_CN]=壮壮
 Buildid=build1
