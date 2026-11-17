@@ -1,5 +1,5 @@
 # Maintainer: CharOfString <root@charofstring.cc>
-pkgname=gxde-desktop-base-git
+pkgname=gxde-desktop-base
 pkgver=2026.11.13
 pkgrel=1
 pkgdesc='Base component for GXDE (desktop identity, distribution info and defaults)'
@@ -10,8 +10,9 @@ depends=('bash')
 optdepends=('zram-generator: use the shipped zram configuration')
 # Makefile 使用 Perl 版 rename ・ The Makefile uses the Perl rename.
 makedepends=('git' 'perl-rename')
-provides=('deepin-desktop-base')
-conflicts=('deepin-desktop-base')
+provides=('deepin-desktop-base' "gxde-desktop-base-git=$pkgver")
+conflicts=('deepin-desktop-base' 'gxde-desktop-base-git')
+replaces=('gxde-desktop-base-git')
 backup=('etc/profile.d/gxde.sh'
         'etc/systemd/zram-generator.conf'
         'etc/systemd/system.conf.d/systemd.conf'
